@@ -1,0 +1,179 @@
+$color1: #5c00e6;
+$color2: #e4e4e4;
+$font-size-md: 20px;
+$font-size-lg: 25px;
+$font-size-xl: 50px;
+$font-family1: 'Arial Narrow';
+$font-family2: 'Franklin Gothic Medium';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $color2;
+    transition: .5s;
+}
+
+.header-container {
+    width: 100%;
+    height: 35vh;
+    h1 {
+        color: $color2;
+        cursor: pointer;
+        margin: 5% 0 0 3%;
+        text-transform: uppercase;
+        font-family: $font-family1;
+        font-size: 40px;
+        letter-spacing: 3px;
+        transition: linear .5s;
+        text-shadow: 0px 0px 20px #ffffff;
+        &:hover {
+            padding-top: 16px;
+            color: #a9ffff;
+            text-decoration: overline;
+            text-shadow: none;
+        }
+        span {
+            color: #00ffff;
+        }
+    }
+    .bmi-wiki {
+        width: 50%;
+        font-size: 15px;
+        &:hover {
+            text-decoration: none;
+            padding-top: 0;
+        }
+    }
+    svg {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        fill: #09365a;
+    }
+}
+
+.form {
+    width: 40%;
+    height: 46vh;
+    margin: -2% 0 0 29%;
+    background-color: $color1;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #2c1056, 0px 0px 20px #2c1056;
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 35vh;
+        label {
+            color: $color2;
+            font-family: $font-family1;
+            font-size: $font-size-md;
+            margin: 1.5% 0;
+            letter-spacing: 3px;
+        }
+        input {
+            width: 27%;
+            height: 5vh;
+            border-radius: 5px;
+            border: none;
+            background-color: #5c00e6;
+            font-family: "Arial Narrow";
+            text-align: center;
+            font-size: 20px;
+            color: $color2;
+            transition: .5s;
+            box-shadow: -2px 2px 5px #ffffff, 2px 2px 5px white, -2px -2px 5px #ffffff, 2px -2px 5px #ffffff;
+            &:focus {
+                box-shadow: -2px 2px 5px #45ff7d, 2px 2px 5px #45ff7d, -2px -2px 5px #45ff7d, 2px -2px 5px #45ff7d;
+                outline: none;
+            }
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 11vh;
+        button {
+            width: 50%;
+            height: 9vh;
+            border-radius: 20px;
+            border: none;
+            color: $color1;
+            font-size: 30px;
+            font-family: $font-family1;
+            cursor: pointer;
+            transition: .5s;
+            box-shadow: 0px 0px 20px #ffffff;
+            letter-spacing: 3px;
+            &:hover {
+                color: $color2;
+                background-color: $color1;
+                border: 1px solid $color2;
+                box-shadow: none;
+            }
+            &:active {
+                box-shadow: inset 0px 0px 20px #dddddd;
+            }
+        }
+    }
+}
+
+.popup {
+    display: flex;
+    position: absolute;
+    top: 41%;
+    left: 29%;
+    width: 40%;
+    height: 46vh;
+    background: $color1;
+    visibility: hidden;
+    border-radius: 24px;
+    .close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 14%;
+        color: #5c00e6;
+        background-color: #e4e4e4;
+        cursor: pointer;
+        border-top-right-radius: 21px;
+        border-bottom-right-radius: 21px;
+        font-size: $font-size-xl;
+    }
+    .res-container {
+        width: 86%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        h3 {
+            color: $color2;
+            font-size: $font-size-lg;
+            font-family: $font-family1;
+            letter-spacing: 3px;
+        }
+    }
+}
+
+.popup.active {
+    visibility: visible;
+}
+
+ ::selection {
+    background-color: $color2;
+}

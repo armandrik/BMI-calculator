@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+    <link rel="stylesheet" href="../sass/style.css">
+    <script src="https://kit.fontawesome.com/a4e95c8d4d.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+    <header class="header-container">
+        <h1 id="header"><span>B</span>ody <span>M</span>ass <span>I</span>ndex Calculator</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#5000ca" fill-opacity="1" d="M0,192L60,208C120,224,240,256,360,256C480,256,600,224,720,181.3C840,139,960,85,1080,74.7C1200,64,1320,96,1380,112L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+        </svg>
+    </header>
+    <main>
+        <div class="form">
+            <div class="input-container">
+                <label for="age"><b>Age</b></label>
+                <input type="number" name="age" id="age-input" min="1" max="99" title="enter yout age">
+                <label for="wight"><b>wight (kg)</b></label>
+                <input type="number" name="wight" id="wight-input" min="1" max="500" title="enter your wight">
+                <label for="height"><b>height (cm)</b></label>
+                <input type="number" name="height" id="height-input" min="10" max="300" title="enter your height">
+            </div>
+            <div class="btn-container">
+                <button id="calculator" type="submit"><b>calculate</b></button>
+            </div>
+        </div>
+    </main>
+    <div class="popup">
+        <div class="res-container">
+            <h3 id="resault"></h3>
+            <h3 id="explane"></h3>
+        </div>
+        <i class="fas fa-times close"></i>
+    </div>
+</body>
+<script src="../JS/main.js"></script>
+
+</html>
