@@ -90,12 +90,13 @@ body {
   font-size: 20px;
   color: #e4e4e4;
   transition: .5s;
-  box-shadow: -2px 2px 5px #ffffff, 2px 2px 5px white, -2px -2px 5px #ffffff, 2px -2px 5px #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
 
 .form .input-container input:focus {
   box-shadow: -2px 2px 5px #45ff7d, 2px 2px 5px #45ff7d, -2px -2px 5px #45ff7d, 2px -2px 5px #45ff7d;
   outline: none;
+  border: none;
 }
 
 .form .input-container input[type=number] {
